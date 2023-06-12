@@ -1,0 +1,84 @@
+/* App.css */
+
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 2em;
+  color: burlywood;
+  font-size: 50px;
+}
+
+/* Outer container */
+#drum-machine {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Pads container */
+.pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+
+/* Display */
+#display {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: grey;
+  border-radius: 5px;
+  border: 2px solid white;
+  width: 100px;
+  text-align: center;
+  
+}
+
+/* Drum pads */
+.drum-pad {
+  display: inline-block;
+  background-color: yellow;
+  color: burlywood;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.drum-pad:hover {
+  background-color: #666;
+}
+
+.audio-clip {
+  display: none;
+}
+

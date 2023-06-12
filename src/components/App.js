@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Pad from './Pad';
+import './App.css';
 
 const audioClips = [
   { id: "Heater-1", letter: "Q", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" },
@@ -45,7 +46,9 @@ const App = () => {
 
   return (
     <div id="drum-machine" className="App">
+      <h1 className= 'title'>Drum Machine</h1>
       <div id="display">{display}</div>
+      <div className='pads'>
       {audioClips.map (clip => (
       <Pad 
       key={clip.id} 
@@ -55,7 +58,9 @@ const App = () => {
       handleDisplay={handleDisplay} 
       />
       ))}
+      </div>
     </div>
   );
 };
 
+export default App;
