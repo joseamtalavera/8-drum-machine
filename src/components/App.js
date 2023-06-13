@@ -22,28 +22,30 @@ const App = () => {
 
 
 
-  const handleKeyDown = (e) => {
-    const key = e.key.toUpperCase();
-    const clip = audioClips.find(c => c.letter === key);
-    if (clip) {
-      const audio = document.getElementById(key);
-      audio.currentTime = 0;
-      audio.play();
-      handleDisplay(clip.id);
-    }
-  };
+  
 
 
   useEffect(() => {
 
+
+    const handleKeyDown = (e) => {
+      const key = e.key.toUpperCase();
+      const clip = audioClips.find(c => c.letter === key);
+      if (clip) {
+        const audio = document.getElementById(key);
+        audio.currentTime = 0;
+        audio.play();
+        handleDisplay(clip.id);
+      }
+    };
+
     
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-
-  }, [audioClips, handleDisplay]);
-
+  }, []);
 
 
+ 
 
 
   return (
@@ -66,3 +68,6 @@ const App = () => {
 };
 
 export default App;
+
+
+
