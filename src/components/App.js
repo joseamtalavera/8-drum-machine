@@ -35,10 +35,12 @@ const App = () => {
 
 
   useEffect(() => {
+
+    
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
 
-  }, []);
+  }, [audioClips, handleDisplay]);
 
 
 
